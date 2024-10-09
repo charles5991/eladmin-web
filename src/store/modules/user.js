@@ -33,7 +33,7 @@ const user = {
         login(userInfo.username, userInfo.password, userInfo.code, userInfo.uuid).then(res => {
           setToken(res.token, rememberMe)
           commit('SET_TOKEN', res.token)
-          setUserInfo(res.user, commit)
+          setUserInfo(res.user, commit) // 设置用户信息与权限
           // 第一次加载菜单时用到， 具体见 src 目录下的 permission.js
           commit('SET_LOAD_MENUS', true)
           resolve()
