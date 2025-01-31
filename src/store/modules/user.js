@@ -71,6 +71,11 @@ const user = {
       return new Promise((resolve, reject) => {
         commit('SET_LOAD_MENUS', false)
       })
+    },
+
+    // New action to toggle roles for testing
+    toggleRoles({ commit }, newRoles) {
+      commit('SET_ROLES', newRoles)
     }
   }
 }
